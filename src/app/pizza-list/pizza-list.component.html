@@ -1,0 +1,19 @@
+<h2>Order List</h2>
+<p>
+  Total: {{ getTotal() | currency:'EUR' }}
+</p>
+
+
+<div *ngIf="orderList.length === 0">No orders…</div>
+
+<ul>
+  <li *ngFor="let p of orderList">{{ p.name }}</li>
+</ul>
+
+<jsd-pizza-item
+  *ngFor="let p of pizzas"
+  [pizza]="p"
+  (order)="addOrder($event)"></jsd-pizza-item>
+
+<hr>
+

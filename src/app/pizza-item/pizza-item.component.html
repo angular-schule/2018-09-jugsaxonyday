@@ -1,0 +1,18 @@
+<div class="card mb-2 bg-light">
+  <div class="card-body">
+    <div class="card-title">
+      <h5>
+        🍕 {{ pizza.name }}
+        <span class="badge badge-success float-right">
+          {{ pizza.price | currency:'EUR' }}
+        </span>
+      </h5>
+    </div>
+
+    <p>
+      {{ pizza.description }}
+    </p>
+
+    <button class="btn btn-sm btn-danger" (click)="orderPizza()">Order</button>
+  </div>
+</div>
